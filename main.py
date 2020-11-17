@@ -1,14 +1,15 @@
+import csv
 import time
-from concurrent.futures.thread import ThreadPoolExecutor
-
-from selenium import webdriver
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.by import By
 
 from TomatoesDTO import TomatoesDTO
-import csv
-
+from selenium import webdriver
+from selenium.common.exceptions import TimeoutException, NoSuchElementException
+from selenium.webdriver import ActionChains
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
 # Main
+from selenium.webdriver.support.wait import WebDriverWait
+
 genre = int(input("""Menu:
                1 - Ação
                2 - Animação
@@ -44,6 +45,13 @@ def genre_number_switcher(x):
     }
     return switcher.get(x, "1;2;4;5;6;8;9;10;11;13;18;14")
 
+url = 'https://www.rottentomatoes.com/browse/dvd-streaming-all?minTomato=0&maxTomato=100' \
+      '&services=amazon;hbo_go;itunes;netflix_iw;vudu;amazon_prime;fandango_now&genres=' \
+      + str(genre_number_switcher(genre)) + '&sortBy=release'
+driver = webdriver.Firefox()
+driver.get(url)
+time.sleep(10)
+
 
 def write_csv(rotten_tomatoes_list):
     with open('lista_filmes.csv', 'w', newline='') as csv_file:
@@ -52,16 +60,23 @@ def write_csv(rotten_tomatoes_list):
 
         writer.writeheader()
 
-        for movie in rotten_tomatoes_list:
-            writer.writerow({movie.name, movie.audiencescore})
+    for movie in rotten_tomatoes_list:
+        writer.writerow({movie.name, movie.audiencescore})
 
 
-url = 'https://www.rottentomatoes.com/browse/dvd-streaming-all?minTomato=0&maxTomato=100' \
-      '&services=amazon;hbo_go;itunes;netflix_iw;vudu;amazon_prime;fandango_now&genres=' \
-      + str(genre_number_switcher(genre)) + '&sortBy=release'
-driver = webdriver.Firefox()
-driver.get(url)
-time.sleep(10)
+#Clica no botão show more até acabar de carregar todos os filmes
+wait = WebDriverWait(driver, 40)
+flag = True
+while flag:
+    try:
+        button = driver.find_element_by_xpath('//*[@id="show-more-btn"]/button')
+        button.click()
+        time.sleep(5)
+    except NoSuchElementException:
+        print("Terminou de carregar as páginas")
+        flag = False
+
+
 
 # Busca na pagina principal todos os links dos filmes
 listMovie = driver.find_elements_by_tag_name("a")
@@ -85,6 +100,8 @@ for movieUrl in movieList:
         percentage = driver.find_elements_by_class_name("mop-ratings-wrap__percentage").__getitem__(1).text
     except IndexError:
         percentage = "Ainda não possui nota da audiência"
+        name = driver.find_element_by_css_selector("h1[data-qa='score-panel-movie-title']").text
+    print('nome filme: '+ name +' nota audiencia: ' + percentage)
     tomatoesList.append(TomatoesDTO(name, percentage))
 
 #tomatoes_list_sort_by_score = sorted(tomatoesList, key=lambda tomatoes: tomatoesList.audiencescore)
@@ -94,3 +111,6 @@ write_csv(tomatoesList)
 #    futures = []
 #    for url in movieList:
 #       executor.submit(scrapping_movie_page, url)
+
+
+
