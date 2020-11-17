@@ -10,7 +10,7 @@ Com essa necessidade, a proposta do nosso trabalho é realizar a captura de aval
 ## RottenTomatoes
 O site [RottenTomatoes](https://www.rottentomatoes.com/) tem a finalidade de classificar filmes em um sistema de avalição não-binário, por meio de notas. Porém seu principal foco é a avaliação profissional (críticos de cinema e TV). E a visualização das notas de audiência é dificultada.
 
-# Motivação
+## Motivação
 Por essas difuldades propomos criar um sistema de captura de avaliação da audiência sobre diversos genêros de filmes no site RottenTomatoes.
 
 ## Comandos
@@ -19,7 +19,7 @@ Por essas difuldades propomos criar um sistema de captura de avaliação da audi
 * `mkdocs build` - Build the documentation site.
 * `mkdocs -h` - Print help message and exit.
 
-## Project layout
+## Esquema do Projeto
 
     mkdocs.yml    # The configuration file.
     docs/
