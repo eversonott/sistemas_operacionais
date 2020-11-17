@@ -1,2 +1,8 @@
-site_name: My Docs
+site_name: Jogue Flores
 theme: readthedocs
+nav:
+    - Home: index.md
+    - Segunda Entrega - Processos, threads e escalonamento: entrega02.md
+    - Terceira Entrega - Software, scripts e comandos Unix: entrega03.md
+    - Quarta Entrega - Gerenciamento de memória: entrega04.md
+    - Quinta Entrega - Sistemas de arquivos e E/S: entrega05.md
