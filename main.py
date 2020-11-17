@@ -87,7 +87,9 @@ movieList = set()
 for movieLink in links:
     if movieLink is not None:
         if "/m/" in movieLink:
-            movieList.add(movieLink)
+            if not "null" in movieLink:
+                movieList.add(movieLink)
+                print(movieLink)
 
 # Cria uma lista de objetos e faz o scrapping dos atributos da pagina do filme
 tomatoesList = []
