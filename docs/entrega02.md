@@ -8,3 +8,7 @@
 
 ## Escalonamento de processos
 * Atividade responsável pela alocação dos processos aos processadores.[Maciel, 2013]
+
+## Porque usamos Multithreads ao inves do Multiprocessors?
+
+
