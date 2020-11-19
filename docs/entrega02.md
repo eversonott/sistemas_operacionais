@@ -14,10 +14,15 @@
 ## Porque usamos Multithreads ao inves do Multiprocessors?
 Para o projeto verificamos que cada genero escolhido pelo usuário tem pelo menos 1000 filmes. Executando esse programa de forma linear demoraria horas para finalizar a execução. Porque utilizamos Multithreads? Pois, multiprocessadores está totalmente relacionado aos cores da máquina e os múltiplos processos do Python tem muito overhead.
 Então utilizamos Multithreaded Web Scraping, pois pode executar tasks concorrentes através de múltiplas threads no mesmo processo, e essas tasks podem ser executadas enquanto o Python está sendo executado, e essas threadssão executadas asíncronamente.
-![Screenshot](images/thread.png)
+<pre><code>with ThreadPoolExecutor(max_workers=5) as executor:
+    futures = [executor.submit(scrapping_movie_page, url) for url in movieList]
+    results = []
+    for result in futures:
+        results.append(result)</code></pre>
 No código definimos que o códio iria rodar com 5 threads, definido pelo max_workers.
 ![Screenshot](images/processos.png)
 Depois da execução do código, verificamos o número de threads que estão rodando e o gerenciamento de memória em no sistema operacional Arch.
+
 
 
 
