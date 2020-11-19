@@ -4,11 +4,16 @@
 * Um processo é basicamente um programa em execução. Associado a cada processo está o seu espaço de endereçamento e uma lista de posições de memória que este processo pode ler e escrever. [Faria, 2013]
 
 ## Threads
-* Uma execução independente (e concorrente) dentro do mesmo processo.
-
+* Uma execução de instruções que pode ser executado em paralelo em vários processos ou concorrente atraves de um processo.
+* Existe dois tipos distintas de Threads:
+    * User-level = Podemos utilizar no código (essa que usamos para fazer esse projeto) 
+    * Kernel-level = Threads que são low-level e são diretamente ligadas aos processos do sistema operacional.
 ## Escalonamento de processos
 * Atividade responsável pela alocação dos processos aos processadores.[Maciel, 2013]
 
 ## Porque usamos Multithreads ao inves do Multiprocessors?
+Para o projeto verificamos que cada genero escolhido pelo usuário tem pelo menos 1000 filmes. Executando esse programa de forma linear demoraria horas para finalizar a execução. Porque utilizamos Multithreads? Pois, multiprocessadores está totalmente relacionado aos cores da máquina e os múltiplos processos do Python tem muito overhead.
+Então utilizamos Multithreaded Web Scraping, pois pode executar tasks concorrentes através de múltiplas threads no mesmo processo, e essas tasks podem ser executadas enquanto o Python está sendo executado, e essas threadssão executadas asíncronamente.
+
 
 

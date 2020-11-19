@@ -1,5 +1,5 @@
 # Gerenciamento de memória 
-asdsadsd
+
 ## Memória
 
 ## Paginação
