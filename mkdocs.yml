@@ -1,0 +1,10 @@
+site_name: Audience Matters 
+repo_url: https://github.com/eversonott/sistemas_operacionais
+theme: readthedocs
+nav:
+    - Home: index.md
+    - Segunda Entrega - Processos, threads e escalonamento: entrega02.md
+    - Terceira Entrega - Software, scripts e comandos Unix: entrega03.md
+    - Quarta Entrega - Gerenciamento de memória: entrega04.md
+    - Quinta Entrega - Sistemas de arquivos e E/S: entrega05.md
+    - Planejamento e Dificuldades: entrega01.md
