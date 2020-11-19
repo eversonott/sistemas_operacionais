@@ -1,6 +1,8 @@
 ## Planejamento 
 No inicio do projeto criamos planner com atividades para serem executadas em formato KanBan. Além disso, nos organizamos no github, criando issues para acompanhar o desenvolvimento do software e para que todos os integrantes do grupo tivesse visibilidade do que estava sendo feito e o que faltava desenvolver.
-![Screenshot](images/issues.png)
+![Screenshot](images/issues.PNG)
+![Screenshot](images/planner.PNG)
+
 
 ##Dificuldades 
 Um obstáculo que encontramos foi a página que fazemos o scraping estar fora do ar/em manutenção, atrapalhando o desenvolvimento e os testes.
