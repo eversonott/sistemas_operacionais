@@ -1,4 +1,5 @@
 site_name: Audience Matters 
+repo_url: https://github.com/eversonott/sistemas_operacionais
 theme: readthedocs
 nav:
     - Home: index.md
