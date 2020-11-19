@@ -1,5 +1,7 @@
 click==7.1.2
 future==0.18.2
+greenlet==0.4.17
+jedi==0.17.2
 Jinja2==2.11.2
 joblib==0.17.0
 livereload==2.6.3
@@ -7,9 +9,18 @@ lunr==0.5.8
 Markdown==3.3.3
 MarkupSafe==1.1.1
 mkdocs==1.1.2
+msgpack==1.0.0
+neovim==0.3.1
 nltk==3.5
+parso==0.7.1
+pluggy==0.13.1
+pynvim==0.4.2
+python-jsonrpc-server==0.4.0
 PyYAML==5.3.1
 regex==2020.11.13
+selenium==3.141.0
 six==1.15.0
 tornado==6.1
 tqdm==4.52.0
+ujson==4.0.1
+urllib3==1.26.2
