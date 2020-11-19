@@ -20,7 +20,7 @@ Então utilizamos Multithreaded Web Scraping, pois pode executar tasks concorren
     for result in futures:
         results.append(result)</code></pre>
 No código definimos que o códio iria rodar com 5 threads, definido pelo max_workers.
-![Screenshot](images/processos.png)
+![Screenshot](img/processos.png)
 Depois da execução do código, verificamos o número de threads que estão rodando e o gerenciamento de memória em no sistema operacional Arch.
 
 

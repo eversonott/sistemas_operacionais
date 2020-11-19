@@ -1,7 +1,7 @@
 ## Planejamento 
 No inicio do projeto criamos planner com atividades para serem executadas em formato KanBan. Além disso, nos organizamos no github, criando issues para acompanhar o desenvolvimento do software e para que todos os integrantes do grupo tivesse visibilidade do que estava sendo feito e o que faltava desenvolver.
-![Screenshot](images/issues.PNG)
-![Screenshot](images/planner.PNG)
+![Screenshot](img/issues.png)
+![Screenshot](img/planner.png)
 
 
 ##Dificuldades 
