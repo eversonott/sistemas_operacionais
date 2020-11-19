@@ -16,5 +16,8 @@ Para o projeto verificamos que cada genero escolhido pelo usuário tem pelo meno
 Então utilizamos Multithreaded Web Scraping, pois pode executar tasks concorrentes através de múltiplas threads no mesmo processo, e essas tasks podem ser executadas enquanto o Python está sendo executado, e essas threadssão executadas asíncronamente.
 ![Screenshot](images/thread.png)
 No código definimos que o códio iria rodar com 5 threads, definido pelo max_workers.
+![Screenshot](images/processos.png)
+Depois da execução do código, verificamos o número de threads que estão rodando e o gerenciamento de memória em no sistema operacional Arch.
+
 
 
