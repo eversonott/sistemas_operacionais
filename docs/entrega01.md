@@ -6,4 +6,5 @@ No inicio do projeto criamos planner com atividades para serem executadas em for
 
 ##Dificuldades 
 Um obstáculo que encontramos foi a página que fazemos o scraping estar fora do ar/em manutenção, atrapalhando o desenvolvimento e os testes.
-Outra dificuldade que tivemos foi desenvolver em threads, apesar de conseguir executar com várias threads para acelerar a execução, o arquivo gerado no final saía todo desorganizado e faltando informações, com isso limitamos a execução e apenas 5 threads.
+
+Outra dificuldade que tivemos foi desenvolver em threads, apesar de conseguir executar com várias threads para acelerar a execução, o arquivo gerado no final ficava todo desorganizado e faltando informações, com isso limitamos a execução e apenas 5 threads.
