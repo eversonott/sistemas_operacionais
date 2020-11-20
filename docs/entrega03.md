@@ -1,5 +1,5 @@
 # Software, scripts e comandos Unix 
-asdsadsd
+* Scripts são utilizados para executar diversas funções.
 ## Scripts
 
 ## Comandos Unix
