@@ -1,4 +1,5 @@
-## Sistemas de arquivos 
+# Sistemas de arquivos 
+ 
 O sistema de arquivo é responsável pelo armazenamento e acesso aos dados e programas que pertencem ao sistema operacional e é muito importante para sistemas multiusuários pois controla a proteção dos arquivos.
 
 Os arquivos são manipulados de formas diferentes de acordo com o sistema operacional e em cada sistema de arquivo. Vemos que o Linux, por exemplo, faz distinção de letras minúsculas e maiúsculas e normalmente o nome de um arquivo o nome e a extensão separados por “.”, também é possível ter mais de uma extensão no mesmo arquivo. E nele tudo é visto como arquivo os drivers dos dispositivos, as pastas, no qual cada arquivo é um inode.
@@ -47,7 +48,7 @@ Utilize o comando umount para desmontar um sistema de arquivos montado no Linux.
 
  O Docker é uma ferramenta que permite criar ambientes isolados e portáteis (containers) e através dela os desenvolvedores podem empacotar aplicações com bibliotecas e links necessários trazendo mais eficiência e simplificação.
 
- Com o Docker não há a necessidade de ter o gerenciamento feito diretamente, ele é instalado em em cada servidor e apresenta comandos simples, facilitanto o dia a dia do desenvolvedor e trazendo segurança.
+Com o Docker não há a necessidade de ter o gerenciamento feito diretamente, ele é instalado em em cada servidor e apresenta comandos simples, facilitanto o dia a dia do desenvolvedor e trazendo segurança.
 
 Para a instalação do Docker seguir os passos do site a seguir: <a href="https://www.hostinger.com.br/tutoriais/install-docker-ubuntu">Docker</a>
 
